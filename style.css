@@ -1,0 +1,620 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+
+    background: #081b29 !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+.navbar {
+    background: #051129;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar-brand span {
+    color: #0ef;
+}
+
+.nav-link:hover {
+    color: #0ef !important;
+    font-weight: bold;
+}
+
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+
+nav li a {
+    width: 100%;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+nav li a.active {
+    color: #0ef !important;
+    font-weight: bold;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content {
+    max-width: 70%;
+    padding: 0 20px;
+    color: white;
+}
+
+.home-content text1 {
+    color: #0ef;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+
+.home-content h3 span {
+    color: #0ef;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+}
+
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.5;
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.home-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-bottom: 25px;
+}
+
+.home-img img {
+
+    border: 1px solid #0ef;
+    border-radius: 50%;
+    padding: 8px;
+    width: 100%;
+    max-width: 350px;
+
+    box-shadow: 0 0 5px cyan,
+        0 0 40px cyan, 0 0 5px cyan,
+        0 0 5px cyan, 0 0 5px cyan;
+}
+
+@media (max-width: 768px) {
+    .home-img img {
+        margin-top: 95px;
+    }
+    
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading h2 {
+    margin: 70px;
+    font-size: 3rem;
+    color: white;
+}
+
+.heading h2 span {
+    color: #0ef;
+}
+
+.about-me {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.about-me .info-items {
+    margin-top: 50px;
+}
+
+.about-me ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -30px;
+}
+
+.about-me .info-items li {
+    border: 2px solid #0ef;
+    border-radius: 10px;
+    background-color: #0ef;
+
+    padding: 7px 26px;
+    margin: 0 0 30px 30px;
+    font-size: 30px;
+    text-align: center;
+
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.5;
+
+    
+    transition: 0.5s ease !important;
+}
+
+.about-me .info-items li:hover{
+    transform: translateY(-10px) !important;
+}
+
+.about-me .info-items li p {
+    color: #081b29;
+    font-size: 1.1rem;
+}
+
+.about-me .info-items li p span {
+    font-weight: 600;
+}
+
+.about-me .cvBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+
+    animation: slideTop 1.5s ease forwards;
+    animation-delay: 0.5;
+}
+
+.my-services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-list {
+    margin-top: 50px;
+}
+
+.services-list div {
+    padding: 40px;
+    border-radius: 20px;
+
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: white !important;
+}
+.services-list div p{
+    color: white;
+}
+
+.services-list div a {
+    text-decoration: none;
+    /* color: #000000; */
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.5s;
+}
+.services-list div:hover {
+    transform: translateY(-10px);
+}
+
+.my-skills1 {
+    width: 600px;
+    padding-left: 30px;
+}
+
+
+.progress-bars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20%;
+}
+
+
+.bar {
+    font-size: 23px;
+}
+
+
+.progress-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.progress-bars .bar:last-child {
+    margin-top: 0;
+}
+
+.progress-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.progress-bars .bar .info span {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+
+.progress-bars .bar .progress-line {
+
+    border-radius: 10px;
+    width: 75%;
+    height: 5px;
+    background-color: #000000;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animates 1s ease forwards;
+    margin-bottom: 10px;
+}
+
+
+.progress-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    animation: animates 1s ease forwards;
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 60%;
+}
+
+.progress-line.javascript span {
+    width: 30%;
+}
+
+.progress-line.c span {
+    width: 90%;
+}
+
+.progress-line.cpp span {
+    width: 90%;
+}
+
+.progress-line.java span {
+    width: 70%;
+}
+
+.progress-line.python span {
+    width: 50%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-bars .bar {
+    margin-top: 40px 0;
+}
+
+.heading1 {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+
+.radial-bars-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.radial-bars-container .radial-bars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+
+
+.radial-bars-container .radial-bars .svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars-container .radial-bars .progress-bar {
+    stroke-width: 10;
+    stroke: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards
+}
+
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards
+}
+
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards
+}
+
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards
+}
+
+.radial-bars .percentage {
+    color: white;
+    position: absolute;
+    /* margin-top: 4%; */
+    font-size: 1.1rem;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bars .text {
+    color: white;
+    width: 100%;
+    text-align: center;
+    bottom: -5px;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.heading h2 {
+    margin-bottom: 30px;
+}
+.entry {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: transparent !important;
+    border: 2px solid #0ef !important;
+    color: white !important;
+}
+
+.entry::placeholder {
+    color: gray !important;
+}
+
+.btn {
+    border: #0ef;
+    padding: 12px 28px;
+    background: #0ef !important;
+    border-radius: 50;
+    color: #081b29;
+    font-weight: 600 !important;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef;
+}
+
+.btn:hover {
+    border: 2px solid #081b29 !important;
+    box-shadow: 0 0 7px #0ef,
+        0 0 7px #0ef;
+}
+
+footer{
+    background: #051129;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+footer .text-center{
+    background: #051129 !important;
+    
+}
+
+footer .footer-social{
+    background: transparent !important;
+}
+
+footer .line{
+    height: 2px !important;
+    background-color: white !important;
+    width: 85%;
+
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes animates {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: var(--dashoffset1);
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: var(--dashoffset2);
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: var(--dashoffset3);
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: var(--dashoffset4);
+    }
+}
