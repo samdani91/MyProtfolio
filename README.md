@@ -1,3 +1,3 @@
 # MyProtfolio
 
-I have build this portfolio for my learing purpose.
+I have build this portfolio for my learning purpose.
